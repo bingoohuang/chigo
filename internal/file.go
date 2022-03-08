@@ -10,7 +10,6 @@ func JoinFiles(files []string) (string, error) {
 
 	for _, file := range files {
 		fileText, err := os.ReadFile(file)
-
 		if err != nil {
 			return "", fmt.Errorf("Error while trying to read file %s.", file)
 		}

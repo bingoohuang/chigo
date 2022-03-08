@@ -11,7 +11,6 @@ func PrintWithColors(text string) {
 
 	for i := 1.0; scanner.Scan(); i++ {
 		rgb := NewRGB(i)
-
-		fmt.Printf("\033[38;2;%d;%d;%dm%s\033[0m\n", rgb.Red, rgb.Green, rgb.Blue, scanner.Text())
+		fmt.Printf("%sm\n", rgb.Color(scanner.Text()))
 	}
 }
